@@ -58,9 +58,9 @@ To remove:
 
 If we want to push an image to **docker hub** we run "docker push USER_NAME_ON_DOCKERHUB/REPO_NAME:TAG":
 
-	docker push coderleonardo/app:v1
+	docker push myusername/app:v1
 	
-To save and load we run: 
+To save and load a local docker image we run: 
 
 	docker image save -o appv2.tar app:v1
 	
