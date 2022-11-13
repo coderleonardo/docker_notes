@@ -37,6 +37,7 @@ Now that we have our image, if we want to run this application (*app*), we can r
 	v12.22.12
 	
 To exit the container we simply type "exit":
+
 	/ # exit
 	
 To list the that are running we type the following code:
