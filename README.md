@@ -1,6 +1,6 @@
 # Some notes about Docker
 
-## Some commands about docker images
+## Some docker images commands
 
 First, download the **app** from the docker web site: https://github.com/docker/getting-started/tree/master/app
 
@@ -66,7 +66,7 @@ To save and load a local docker image we run:
 	
 	docker image load -i appv2.tar
 	
-## Some commands about containers
+## Some docker containers commands
 
 To list the containers that are running:
 	
@@ -130,4 +130,26 @@ Options to remove:
 We can also create volumes:
 
 	docker volume create app-dados
+	
+## Some docker compose commands
+
+First, download the "netflix" folder and check if [docker compose](https://docs.docker.com/compose/install/) is installed in your computer
+
+In the netflix folder run the following code to build the image e run the container:
+
+	netflix$ docker compose up
+	
+To list the container that are running with docker compose type
+	
+	docker compose ps
+
+Now, if you to see how the network of docker works with multiple containers run the following codes:
+
+	netflix$ docker exec -it -u root e258f97f04c3 sh
+
+	/app # ifconfig
+	
+To see the logs:
+	
+	docker compose logs
 	
