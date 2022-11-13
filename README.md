@@ -40,7 +40,7 @@ To exit the container we simply type "exit":
 
 	/ # exit
 	
-To list the that are running we type the following code:
+To list the containers that are running we type the following code:
 
 	docker ps
 	
