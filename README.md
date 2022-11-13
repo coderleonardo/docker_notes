@@ -48,7 +48,7 @@ To stop the container:
 
 	docker stop CONTAINER_ID
 
-To add a specific tag we can use "REPO_NAME:TAG", in the example above, we use "app:v1.0.0":
+To add a specific tag we can use "REPO_NAME:TAG", in the example below, we use "app:v1.0.0":
 
 	app$ docker build -t app:v1.0.0 .
 
