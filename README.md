@@ -66,3 +66,68 @@ To save and load a local docker image we run:
 	
 	docker image load -i appv2.tar
 	
+## Some commands about containers
+
+To list the containers that are running:
+	
+	docker ps
+	
+We we get something like the example below we need to build our docker image
+
+	CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+	
+
+Build the docker image:
+
+	app$ docker build -t app:v2 .
+	
+If we want to give a name to our container we can run the following code:
+	
+	app$ docker run -d --name container_name app:v2
+	
+To see the logs and the available options run
+	
+	docker logs --help
+
+To see the options to run a container we type
+	
+	docker run --help
+
+	>>> Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+For example, if we want to run a container in background and print container ID (*-d*) and publish a container's port(s) to the host (*-p*) we type: 
+
+	docker run -d -p 80:3000 --name container_name app:v2
+	
+Now, if we want to list the files in a docker image we can run the following code:
+
+	docker exec container_name ls
+	
+	>>> Dockerfile
+	>>> appv2.tar
+	>>> node_modules
+	>>> package.json
+	>>> spec
+	>>> src
+	>>> yarn.lock
+	
+To stop or start a container we run 
+
+	docker stop container_name
+
+	docker start container_name
+
+To remove one or more containers:
+
+	docker rm
+	
+Options to remove:
+	
+	docker rm --help
+
+	>>> Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+We can also create volumes:
+
+	docker volume create app-dados
+	
