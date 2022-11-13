@@ -5,6 +5,7 @@
 First, download the **app** from the docker web site: https://github.com/docker/getting-started/tree/master/app
 
 The app folder should have the following files and folders:
+
 	- Dockerfile  
 	- package.json  
 	- spec  
